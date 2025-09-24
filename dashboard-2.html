@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Code2Canvas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="hover-trigger"></div>
+    
+    <aside class="left-sidebar" aria-hidden="true">
+        <div class="logo" style="margin-bottom:24px;">
+           <img src="assets/logo.png" alt="Logo" class="w-10 h-10 rounded-full" />
+        </div>
+        <div class="divider"></div>
+         <div class="flex flex-col gap-3">
+        <a href="dashboard-main.html">
+          <div class="">
+            <img src="assets/left-side-1.png" style="width: 25px;">
+          </div>
+        </a>
+        <a href="dashboard-2.html" style="margin-left: -4px;">
+          <div class="">
+            <img src="assets/left-side-black-2.png" style="width: 35px;">
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <div class="main-container">
+        <main class="main-content">
+            <header style="padding-bottom:8px">
+                <div class="flex" style="align-items:center; gap: 16px;">
+                    <div>
+                        <h1>Hi Edwin</h1>
+                        <div class="sub">Welcome to your dashboard</div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="events mb-8">
+                <h2>Events</h2>
+                <div class="events-grid">
+                    <div class="card green">
+                        <div class="flex-col gap-2">
+                            <div style="align-items:center; gap:10px;">
+                                <div class="icon-round"><img src="assets/1.png"></div>
+                                <div style="flex:1; margin: 4px;">
+                                    <div style="font-size:12px;font-weight:700">UDZN - Vyvidh '24</div>
+                                    <div style="font-size:11px;opacity:.9">UI design hackathon</div>
+                                </div>
+                            </div>
+                            <div class="btn">Applied</div>
+                        </div>
+                    </div>
+                    <div class="card blue">
+                        <div class="flex-col gap-2">
+                            <div  style="align-items:center; gap:10px;">
+                                <div class="icon-round"><img src="assets/2.png"></div>
+                                <div style="margin: 4px;">
+                                    <div style="font-weight:700">Sandshores '24</div>
+                                    <div style="font-size:11px">Website dev hackathon</div>
+                                </div>
+                            </div>
+                            <div class="btn">Apply</div>
+                        </div>
+                    </div>
+                    <div class="card purple">
+                        <div class="flex-col gap-2">
+                            <div  style="align-items:center; gap:10px;">
+                                <div class="icon-round"><img src="assets/3.png"></div>
+                                <div style="margin: 2px;">
+                                    <div style="font-weight:600">Designathon '24</div>
+                                    <div style="font-size:11px">UX design competition</div>
+                                </div>
+                            </div>
+                            <div class="btn">Apply</div>
+                        </div>
+                    </div>
+                    <div class="card orange">
+                        <div class="flex-col gap-2">
+                            <div  style="align-items:center; gap:10px;">
+                                <div class="icon-round"><img src="assets/4.png"></div>
+                                <div style="margin: 4px;">
+                                    <div style="font-weight:700">CodeStorm '24</div>
+                                    <div style="font-size:11px">Beach side hackathon</div>
+                                </div>
+                            </div>
+                            <div class="btn">Apply</div>
+                        </div>
+                    </div>
+                    <div class="card pink">
+                        <div class="flex-col gap-2">
+                            <div  style="align-items:center; gap:10px;">
+                                <div class="icon-round"><img src="assets/5.png"></div>
+                                <div style="margin: 4px;">
+                                    <div style="font-weight:700">PES HACKS '24</div>
+                                    <div style="font-size:11px">App dev hackathon</div>
+                                </div>
+                            </div>
+                            <div class="btn">Apply</div>
+                        </div>
+                    </div>
+                    <div class="card red">
+                        <div class="flex-col gap-2">
+                            <div  style="align-items:center; gap:10px;">
+                                <div class="icon-round"><img src="assets/6.png"></div>
+                                <div style="margin: 4px;">
+                                    <div style="font-weight:700">Designathon</div>
+                                    <div style="font-size:11px">NID designathon 2024</div>
+                                </div>
+                            </div>
+                            <div class="btn">Apply</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top:12px;display:flex;align-items:center;gap:8px">
+                    <strong style="font-size:14px">View all</strong>
+                    <span style="opacity:.6">→</span>
+                </div>
+            </section>
+
+            <section class="card-large mb-8">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+                    <h2 style="margin:0;font-size:20px">Todo list</h2>
+                    <div class="controls">
+                        <div class="search">
+                            <svg width="16" height="16" viewBox="0 0 24 24" style="margin-right:8px;opacity:.7">
+                                <circle cx="11" cy="11" r="6" stroke="#222" stroke-width="1" fill="none"></circle>
+                                <path d="M21 21 L16.7 16.7" stroke="#222" stroke-width="1" stroke-linecap="round"></path>
+                            </svg>
+                            <input type="text" placeholder="Search task" />
+                        </div>
+                    </div>
+                </div>
+                <div class="this-week">
+                    <h3>This week</h3>
+                    <div style="margin-top:10px" class="todo-item">
+                        <div class="todo-left">
+                            <div style="width:10px;height:10px;background:#2C7A4B;border-radius:3px">
+                            </div>
+                            <div style="font-weight:600">Write an essay about Indian economy</div>
+                        </div>
+                        <div class="flex gap-2" style="align-items:center;">
+                            <div style="background:#FFEAF6; color:#FF4DA6; padding:6px 8px; border-radius:999px; font-weight:600; font-size:12px;">Today</div>
+                            <div style="font-size:12px;color:var(--muted)">Economics</div>
+                            <div style="display:flex;align-items:center;gap:6px">
+                                <img src="https://api.builder.io/api/v1/image/assets/TEMP/830a27c0761c4cd7f48c0f5c03145ba6b9a8aa69?width=40"
+                                    alt=""
+                                    style="width:20px;height:20px;border-radius:50%;border:2px solid white" />
+                                <img src="https://api.builder.io/api/v1/image/assets/TEMP/e8c6ed7d9f15ddff8958aacb101329216b4a677e?width=42"
+                                    alt=""
+                                    style="width:20px;height:20px;border-radius:50%;border:2px solid white" />
+                                <div
+                                    style="width:20px;height:20px;background:#2C7A4B;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px">
+                                    Q</div>
+                                    <div>+<strong style="font-size:20px"></strong></div>
+                            </div>
+                            <div class="flex gap-2" style="align-items:center;color:var(--muted);font-size:12px">
+                                <div>🔁 <strong style="font-size:11px">2</strong></div>
+                                <div>💬 <strong style="font-size:11px">2</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                     <div style="margin-top:10px" class="todo-item">
+                        <div class="todo-left">
+                            <div style="width:10px;height:10px;background:#2C7A4B;border-radius:3px">
+                            </div>
+                            <div style="font-weight:600">Do Network Lab Programs</div>
+                        </div>
+                        <div class="flex gap-2" style="align-items:center;">
+                            <div style="background:#FFEAF6; color:#FF4DA6; padding:6px 8px; border-radius:999px; font-weight:600; font-size:12px;">2 Days Left</div>
+                            <div style="font-size:12px;color:var(--muted)">Network Lab</div>
+                            <div style="display:flex;align-items:center;gap:6px">
+                                <img src="https://api.builder.io/api/v1/image/assets/TEMP/830a27c0761c4cd7f48c0f5c03145ba6b9a8aa69?width=40"
+                                    alt=""
+                                    style="width:20px;height:20px;border-radius:50%;border:2px solid white" />
+                                <img src="https://api.builder.io/api/v1/image/assets/TEMP/e8c6ed7d9f15ddff8958aacb101329216b4a677e?width=42"
+                                    alt=""
+                                    style="width:20px;height:20px;border-radius:50%;border:2px solid white" />
+                                <div
+                                    style="width:20px;height:20px;background:#2C7A4B;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px">
+                                    Q</div>
+                                    <div>+<strong style="font-size:20px"></strong></div>
+                            </div>
+                            <div class="flex gap-2" style="align-items:center;color:var(--muted);font-size:12px">
+                                <div>🔁 <strong style="font-size:11px">2</strong></div>
+                                <div>💬 <strong style="font-size:11px">2</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                     <div style="margin-top:10px" class="todo-item">
+                        <div class="todo-left">
+                            <div style="width:10px;height:10px;background:#2C7A4B;border-radius:3px">
+                            </div>
+                            <div style="font-weight:600">Design The UI For Mini Project</div>
+                        </div>
+                        <div class="flex gap-2" style="align-items:center;">
+                            <div style="background:#FFEAF6; color:#FF4DA6; padding:6px 8px; border-radius:999px; font-weight:600; font-size:12px;">24/02/2024</div>
+                            <div style="font-size:12px;color:var(--muted)">Mini project</div>
+                            <div style="display:flex;align-items:center;gap:6px">
+                                <img src="https://api.builder.io/api/v1/image/assets/TEMP/830a27c0761c4cd7f48c0f5c03145ba6b9a8aa69?width=40"
+                                    alt=""
+                                    style="width:20px;height:20px;border-radius:50%;border:2px solid white" />
+                                <img src="https://api.builder.io/api/v1/image/assets/TEMP/e8c6ed7d9f15ddff8958aacb101329216b4a677e?width=42"
+                                    alt=""
+                                    style="width:20px;height:20px;border-radius:50%;border:2px solid white" />
+                                <div
+                                    style="width:20px;height:20px;background:#2C7A4B;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px">
+                                    Q</div>
+                                    <div>+<strong style="font-size:20px"></strong></div>
+                            </div>
+                            <div class="flex gap-2" style="align-items:center;color:var(--muted);font-size:12px">
+                                <div>🔁 <strong style="font-size:11px">2</strong></div>
+                                <div>💬 <strong style="font-size:11px">2</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                     <div style="margin-top:10px" class="todo-item">
+                        <div class="todo-left">
+                            <div style="width:10px;height:10px;background:#2C7A4B;border-radius:3px">
+                            </div>
+                            <div style="font-weight:600">Attend the meeting with clients</div>
+                        </div>
+                        <div class="flex gap-2" style="align-items:center;">
+                            <div style="background:#FFEAF6; color:#FF4DA6; padding:6px 8px; border-radius:999px; font-weight:600; font-size:12px;">4 Days left</div>
+                            <div style="font-size:12px;color:var(--muted)">Freelancing</div>
+                            <div style="display:flex;align-items:center;gap:2px">
+                                <img src="https://api.builder.io/api/v1/image/assets/TEMP/830a27c0761c4cd7f48c0f5c03145ba6b9a8aa69?width=40"
+                                    alt=""
+                                    style="width:20px;height:20px;border-radius:50%;border:2px solid white" />
+                                <img src="https://api.builder.io/api/v1/image/assets/TEMP/e8c6ed7d9f15ddff8958aacb101329216b4a677e?width=42"
+                                    alt=""
+                                    style="width:20px;height:20px;border-radius:50%;border:2px solid white" />
+                                <div
+                                    style="width:20px;height:20px;background:#2C7A4B;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:10px">
+                                    Q</div>
+                                    <div>+<strong style="font-size:20px"></strong></div>
+                            </div>
+                            <div class="flex gap-2" style="align-items:center;color:var(--muted);font-size:12px">
+                                <div>🔁 <strong style="font-size:11px">2</strong></div>
+                                <div>💬 <strong style="font-size:11px">2</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="cards-row">
+                <div class="small-card">
+                    <h3 style="margin:0 0 12px 0">Internal Marks</h3>
+                    <div style="display:flex;align-items:center;gap:8px">
+                        <div style="width:10px;height:10px;background:#2C7A4B;border-radius:50%">
+                        </div>
+                        <div style="font-weight:700;color:#2C7A4B">On track</div>
+                    </div>
+                    <div class="bar-graph">
+                        <div class="bar-container">
+                            <div class="bar-score">30</div>
+                            <div class="bar">
+                                <div class="bar-fill" style="height: 75%;background: #7B3AEA;"></div>
+                            </div>
+                            <div class="bar-label">AAD</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-score">24</div>
+                            <div class="bar">
+                                <div class="bar-fill" style="height: 60%;background: #7B3AEA;"></div>
+                            </div>
+                            <div class="bar-label">CG</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-score">40</div>
+                            <div class="bar">
+                                <div class="bar-fill" style="height: 100%;background: #7B3AEA;"></div>
+                            </div>
+                            <div class="bar-label">EC</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-score">28</div>
+                            <div class="bar">
+                                <div class="bar-fill" style="height: 70%;background: #7B3AEA;"></div>
+                            </div>
+                            <div class="bar-label">NL</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-score">35</div>
+                            <div class="bar">
+                                <div class="bar-fill" style="height: 87%;background: #7B3AEA;"></div>
+                            </div>
+                            <div class="bar-label">PY</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-score">46</div>
+                            <div class="bar">
+                                <div class="bar-fill" style="height: 100%; background: #7B3AEA;"></div>
+                            </div>
+                            <div class="bar-label">CD</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-score">13</div>
+                            <div class="bar">
+                                <div class="bar-fill" style="height: 32%; background: #7B3AEA;"></div>
+                            </div>
+                            <div class="bar-label">COM</div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="small-card">
+                    <h3 style="margin:0 0 12px 0">Skill progress</h3>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex" style="align-items:center;gap:12px">
+                            <div style="width:30px">Java</div>
+                            <div class="flex gap-4" style="flex:1; margin-left: 20px;">
+                                <div class="progress-bar" style="flex:1"><i style="width:45%; background:#7B3AEA;"></i></div>
+                                <div class="progress-bar" style="flex:1"><i style="width:0%; background:#7B3AEA;"></i></div>
+                            </div>
+                        </div>
+                        <div class="flex" style="align-items:center;gap:12px; ">
+                            <div style="width:40px">Python</div>
+                            <div class="flex gap-2" style="flex:1; margin-left: 10px;">
+                                <div class="progress-bar" style="flex:1"><i style="width:55%; background:#7B3AEA;"></i></div>
+                                <div class="progress-bar" style="flex:1"><i style="width:0%; background:#7B3AEA;"></i></div>
+                            </div>
+                        </div>
+                        <div class="flex" style="align-items:center;gap:12px">
+                            <div style="width:60px">JS</div>
+                            <div class="flex gap-2" style="flex:1; margin-left: -9px;">
+                                <div class="progress-bar" style="flex:1"><i style="width:70%; background:#7B3AEA;"></i></div>
+                                <div class="progress-bar" style="flex:1"><i style="width:0%; background:#7B3AEA;"></i></div>
+                            </div>
+                        </div>
+                        <div class="flex" style="align-items:center;gap:12px">
+                            <div style="width:30px">React  </div>
+                            <div class="flex gap-3" style="flex:1; margin-left: 20px;">
+                                <div class="progress-bar" style="flex:1"><i style="width:20%; background:#7B3AEA;"></i></div>
+                                <div class="progress-bar" style="flex:1"><i style="width:0%; background:#7B3AEA;"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top:12px;display:flex;align-items:center;gap:8px">
+                        <strong>View all</strong> <span style="opacity:.6">→</span>
+                    </div>
+                </div>
+                <div class="small-card">
+                    <h3 style="margin:0 0 12px 0">Ongoing projects</h3>
+                    <div class="flex gap-2" style="align-items:center;">
+                        <div
+                            style="width:30px;height:36px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center">
+                            <img src="assets/figma.PNG">
+                        </div>
+                        <div>
+                            <div style="font-weight:700">Premagic UI design</div>
+                            <div style="font-size:12px;color:var(--muted)">22 Feb 2024</div>
+                        </div>
+                    </div>
+                     <div class="flex gap-2" style="align-items:center;">
+                        <div
+                            style="width:30px;height:36px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center">
+                            <img src="assets/globe.PNG">
+                        </div>
+                        <div>
+                            <div style="font-weight:700">Panda website development</div>
+                            <div style="font-size:12px;color:var(--muted)">22 Feb 2024</div>
+                        </div>
+                    </div>
+                     <div class="flex gap-2" style="align-items:center;">
+                        <div
+                            style="width:30px;height:36px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center">
+                            <img src="assets/pencil.PNG">
+                        </div>
+                        <div>
+                            <div style="font-weight:700">Salesync UX design</div>
+                            <div style="font-size:12px;color:var(--muted)">22 Feb 2024</div>
+                        </div>
+                    </div>
+                    <div style="margin-top:12px;display:flex;align-items:center;gap:8px">
+                        <strong>View all</strong> <span style="opacity:.6">→</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="right-sidebar">
+            <section class="resource mb-8">
+                <h2>Resource hub</h2>
+                <div style="height:12px"></div>
+                <div class="searchbar" style="margin-bottom:12px;position:relative">
+                    <input type="text" value="CST 302" aria-label="search resource" />
+                    <div class="search-icon"><img src="assets/search-icon.png" style="width: 25px;"></div>
+                    <div class="right-actions"><span style="opacity:.8">Cancel</span></div>
+                </div>
+                <div class="resource-item">
+                    <div style="width:36px;height:46px;display:flex;align-items:center;justify-content:center">
+                        <img src="assets/51.PNG" style="width: 23px;">
+                    </div>
+                    <div style="flex:1">
+                        <div
+                            style="font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                            Compiler Design Module 1.pdf</div>
+                        <div style="font-size:11px;color:var(--muted)">CST 302</div>
+                    </div>
+                    <div style="width: 23px;"><img src="assets/52.PNG" style="width: 23px;"> </div>
+                </div>
+                <div class="resource-item">
+                    <div style="width:36px;height:46px;display:flex;align-items:center;justify-content:center">
+                        <img src="assets/51.PNG" style="width: 23px;">
+                    </div>
+                    <div style="flex:1">
+                        <div
+                            style="font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                            Compiler Design Module 1.pdf</div>
+                        <div style="font-size:11px;color:var(--muted)">CST 302</div>
+                    </div>
+                    <div style="width: 23px;"><img src="assets/52.PNG" style="width: 23px;"> </div>
+                </div>
+                <div class="resource-item">
+                    <div style="width:36px;height:46px;display:flex;align-items:center;justify-content:center">
+                        <img src="assets/51.PNG" style="width: 23px;">
+                    </div>
+                    <div style="flex:1">
+                        <div
+                            style="font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                            Compiler Design Module 1.pdf</div>
+                        <div style="font-size:11px;color:var(--muted)">CST 302</div>
+                    </div>
+                    <div style="width: 23px;"><img src="assets/52.PNG" style="width: 23px;"> </div>
+                </div>
+                <div class="resource-item">
+                    <div style="width:36px;height:46px;display:flex;align-items:center;justify-content:center">
+                        <img src="assets/51.PNG" style="width: 23px;">
+                    </div>
+                    <div style="flex:1">
+                        <div
+                            style="font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                            Compiler Design Module 1.pdf</div>
+                        <div style="font-size:11px;color:var(--muted)">CST 302</div>
+                    </div>
+                    <div style="width: 23px;"><img src="assets/52.PNG" style="width: 23px;"> </div>
+                </div>
+                <div class="resource-item">
+                    <div style="width:36px;height:46px;display:flex;align-items:center;justify-content:center">
+                        <img src="assets/51.PNG" style="width: 23px;">
+                    </div>
+                    <div style="flex:1">
+                        <div
+                            style="font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                            Compiler Design Module 1.pdf</div>
+                        <div style="font-size:11px;color:var(--muted)">CST 302</div>
+                    </div>
+                    <div style="width: 23px;"><img src="assets/52.PNG" style="width: 23px;"> </div>
+                </div>
+                <div class="resource-item">
+                    <div style="width:36px;height:46px;display:flex;align-items:center;justify-content:center">
+                        <img src="assets/51.PNG" style="width: 23px;">
+                    </div>
+                    <div style="flex:1">
+                        <div
+                            style="font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                            Compiler Design Module 1.pdf</div>
+                        <div style="font-size:11px;color:var(--muted)">CST 302</div>
+                    </div>
+                    <div style="width: 23px;"><img src="assets/52.PNG" style="width: 23px;"> </div>
+                </div>
+                <div class="resource-item">
+                    <div style="width:36px;height:46px;display:flex;align-items:center;justify-content:center">
+                        <img src="assets/51.PNG" style="width: 23px;">
+                    </div>
+                    <div style="flex:1">
+                        <div
+                            style="font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                            Compiler Design Module 1.pdf</div>
+                        <div style="font-size:11px;color:var(--muted)">CST 302</div>
+                    </div>
+                    <div style="width: 23px;"><img src="assets/52.PNG" style="width: 23px;"> </div>
+                </div>
+                <div class="resource-item">
+                    <div style="width:36px;height:46px;display:flex;align-items:center;justify-content:center">
+                        <img src="assets/51.PNG" style="width: 23px;">
+                    </div>
+                    <div style="flex:1">
+                        <div
+                            style="font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                            Compiler Design Module 1.pdf</div>
+                        <div style="font-size:11px;color:var(--muted)">CST 302</div>
+                    </div>
+                    <div style="width: 23px;"><img src="assets/52.PNG" style="width: 23px;"> </div>
+                </div>
+                <div class="resource-item">
+                    <div style="width:36px;height:46px;display:flex;align-items:center;justify-content:center">
+                        <img src="assets/51.PNG" style="width: 23px;">
+                    </div>
+                    <div style="flex:1">
+                        <div
+                            style="font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                            Compiler Design Module 1.pdf</div>
+                        <div style="font-size:11px;color:var(--muted)">CST 302</div>
+                    </div>
+                    <div style="width: 23px;"><img src="assets/52.PNG" style="width: 23px;"> </div>
+                </div>
+                <div class="resource-item">
+                    <div style="width:36px;height:46px;display:flex;align-items:center;justify-content:center">
+                        <img src="assets/51.PNG" style="width: 23px;">
+                    </div>
+                    <div style="flex:1">
+                        <div
+                            style="font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                            Compiler Design Module 1.pdf</div>
+                        <div style="font-size:11px;color:var(--muted)">CST 302</div>
+                    </div>
+                    <div style="width: 23px;"><img src="assets/52.PNG" style="width: 23px;"> </div>
+                </div>
+                <div class="resource-item">
+                    <div style="width:36px;height:46px;display:flex;align-items:center;justify-content:center">
+                        <img src="assets/51.PNG" style="width: 23px;">
+                    </div>
+                    <div style="flex:1">
+                        <div
+                            style="font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                            Compiler Design Module 1.pdf</div>
+                        <div style="font-size:11px;color:var(--muted)">CST 302</div>
+                    </div>
+                    <div style="width: 23px;"><img src="assets/download.PNG" style="width: 23px;"> </div>
+                </div>
+                <div style="margin-top:12px;display:flex;align-items:center;gap:8px">
+                    <strong>View all</strong> <span style="opacity:.6">→</span>
+                </div>
+            </section>
+            <section class="card-large">
+                <h3 style="margin:0 0 12px 0">Class group, educational links</h3>
+                <div class="flex gap-2" style="align-items:center">
+                    <a href="https://www.whatsapp.com/">
+                        <div style="opacity:.7"><img src="assets/wa.PNG" style="width: 30px;"></div>
+                    </a>
+                    <a href="https://telegram.org/">
+                        <div style="opacity:.7"><img src="assets/tg.PNG" style="width: 30px;"></div>
+                    </a>
+                    <a href="https://drive.google.com/">
+                        <div style="opacity:.7"><img src="assets/drive.PNG" style="width: 27px;"></div>
+                    </a>
+                    <a href="https://www.youtube.com/">
+                        <div style="opacity:.7"><img src="assets/yt.PNG" style="width: 30px;"></div>
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <div style="opacity:.7"><img src="assets/insta.PNG" style="width: 27px;"></div>
+                    </a>
+                    <a href="https://www.messenger.com/">
+                        <div style="opacity:.7"><img src="assets/msg.PNG" style="width: 30px;"></div>
+                    </a>
+                </div>
+            </section>
+        </aside>
+
+    </div>
+</body>
+
+</html>

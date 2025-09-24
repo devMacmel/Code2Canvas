@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code2Canvas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-base: #6b4eff;
+      --sky-light: #e3e5e5;
+      --ink-lighter: #72777a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Inter", sans-serif;
+      background: #fff;
+      color: #1d1b20;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 402px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .logo img {
+      width: 140px;
+      height: 140px;
+      object-fit: contain;
+    }
+
+    .header-text {
+      text-align: center;
+    }
+
+    .header-text h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .header-text p {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--ink-lighter);
+    }
+
+    form {
+      width: 100%;
+      max-width: 327px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    form input[type="text"],
+    form input[type="password"] {
+      width: 100%;
+      height: 48px;
+      padding: 0 14px;
+      border: 1px solid var(--sky-light);
+      border-radius: 8px;
+      font-size: 16px;
+      color: var(--ink-lighter);
+      outline: none;
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+
+    form input:focus {
+      border-color: var(--primary-base);
+      box-shadow: 0 0 0 2px rgba(107, 78, 255, 0.3);
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .checkbox input {
+      width: 14px;
+      height: 14px;
+    }
+
+    button {
+      height: 48px;
+      background: var(--primary-base);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 24px;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background: #5a3be0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="assets/logo.png?width=280" alt="Dashboard Logo">
+    </div>
+    <div class="header-text">
+      <h1>Sign in to your Dashboard</h1>
+      <p>Please enter your email id and password</p>
+    </div>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+
+      <div class="checkbox">
+        <input type="checkbox" id="keep-signed-in">
+        <label for="keep-signed-in">Keep me signed in</label>
+      </div>
+      <button type="submit">Button</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

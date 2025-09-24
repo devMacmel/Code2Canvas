@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code2Canvas</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* style.css */
+    :root {
+      --dashboard-secondary: #0a0e10;
+      --dashboard-gray-100: #f7f7f7;
+      --dashboard-gray-200: #6b6b6b;
+      --dashboard-gray-400: #a9a9a9;
+      --dashboard-primary: #4d29ef;
+      --dashboard-blue-light: #e6e9ff;
+      --dashboard-blue-bg: #e2e8ff;
+      --dashboard-blue-text: #4d29ef;
+      --dashboard-orange-light: #fff0e1;
+      --dashboard-orange-bg: #ffe7d3;
+      --dashboard-orange-text: #e68a3e;
+      --dashboard-cyan-light: #d1f4ff;
+      --dashboard-cyan-bg: #c1e7f0;
+      --dashboard-cyan-text: #2c93b6;
+      --dashboard-pink-light: #ffe6f5;
+      --dashboard-pink-bg: #f9d4e9;
+      --dashboard-pink-text: #dd46a6;
+      --dashboard-green-light: #d3f3ee;
+      --dashboard-green-bg: #a8dfd6;
+      --dashboard-green-text: #1d7465;
+    }
+
+    .text-dashboard-secondary {
+      color: var(--dashboard-secondary);
+    }
+
+    .text-dashboard-primary {
+      color: var(--dashboard-primary);
+    }
+
+    .text-dashboard-gray-200 {
+      color: var(--dashboard-gray-200);
+    }
+
+    .text-dashboard-gray-400 {
+      color: var(--dashboard-gray-400);
+    }
+
+    .bg-dashboard-gray-100 {
+      background-color: var(--dashboard-gray-100);
+    }
+
+    .bg-dashboard-blue-light {
+      background-color: var(--dashboard-blue-light);
+    }
+
+    .bg-dashboard-blue-bg {
+      background-color: white;
+    }
+
+    .bg-dashboard-orange-light {
+      background-color: var(--dashboard-orange-light);
+    }
+
+    .bg-dashboard-orange-bg {
+      background-color: white;
+    }
+
+    .bg-dashboard-cyan-light {
+      background-color: var(--dashboard-cyan-light);
+    }
+
+    .bg-dashboard-cyan-bg {
+      background-color: white;
+    }
+
+    .bg-dashboard-pink-light {
+      background-color: var(--dashboard-pink-light);
+    }
+
+    .bg-dashboard-pink-bg {
+      background-color: white;
+    }
+
+    .bg-dashboard-green-light {
+      background-color: var(--dashboard-green-light);
+    }
+
+    .bg-dashboard-green-bg {
+      background-color: white;
+    }
+
+    .text-dashboard-blue-text {
+      color: var(--dashboard-blue-text);
+    }
+
+    .text-dashboard-orange-text {
+      color: var(--dashboard-orange-text);
+    }
+
+    .text-dashboard-cyan-text {
+      color: var(--dashboard-cyan-text);
+    }
+
+    .text-dashboard-pink-text {
+      color: var(--dashboard-pink-text);
+    }
+
+    .text-dashboard-green-text {
+      color: var(--dashboard-green-text);
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+
+  <div class="min-h-screen flex overflow-x-auto">
+    <div class="w-24 bg-white border-r border-gray-200 flex flex-col items-center py-6 rounded-r-[20px] flex-shrink-0">
+      <div class="h-10 bg-gray-100 rounded-full mb-8 flex items-center justify-center" style="width: 4.5rem;">
+        <img src="assets/logo.png" alt="Logo" class="h-10 rounded-full" />
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <a href="dashboard-main.html">
+          <div class="w-6 h-6 text-black cursor-pointer">
+            <img src="assets/left-side-black-1.png">
+          </div>
+        </a>
+        <a href="dashboard-2.html">
+          <div class="w-6 h-6 text-black/20 cursor-pointer">
+            <img src="assets/left-side-2.png">
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="flex-1 p-6">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
+        <div>
+          <h1 class="text-2xl font-bold text-black">Hi Edwin</h1>
+          <p class="text-base text-black">Welcome to your dashboard</p>
+        </div>
+
+        <div class="relative w-full sm:w-[309px]" style="width: 27%;">
+          <div class="flex items-center bg-white border border-gray-200 rounded-lg px-4 py-3 gap-3">
+            <img src="assets/search-icon.png" style="width: 25px;">
+            <input type="text" placeholder="Search" class="flex-1 outline-none text-gray-500" />
+            <img src="assets/mic.PNG" style="width: 20px;">
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col xl:flex-row gap-4">
+        <div class="flex-1 space-y-6">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h2 class="text-lg font-bold text-dashboard-secondary">
+                Courses
+              </h2>
+              <div class="flex items-center gap-1 text-dashboard-primary font-bold text-sm cursor-pointer">
+                <span>View all</span>
+                <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              <div class="bg-dashboard-blue-light p-4 rounded-2xl">
+                <div class="bg-dashboard-blue-bg rounded-full w-10 h-10 flex items-center justify-center mb-2">
+                  <img src="assets/python-icon.png" style="width: 40px;">
+                </div>
+                <h3 class="text-dashboard-blue-text font-bold text-xs mb-2">
+                  Python
+                </h3>
+                <div class="bg-dashboard-blue-bg rounded-lg p-2 mb-2">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-dashboard-blue-text text-[10px]">
+                      Attendance
+                    </span>
+                  </div>
+                  <svg class="w-8 h-4" viewBox="0 0 31 17" fill="none">
+                    <path
+                      d="M1 15.3521C1 15.3521 4.07292 16.2475 7.14578 15.3521C14.3072 13.2653 12 3.05176e-05 17.5 3.50003C24.0892 7.69316 29.3281 7.46942 30.25 1.50003"
+                      stroke="url(#paint0_linear)" stroke-width="1.5" stroke-linecap="round" />
+                    <defs>
+                      <linearGradient id="paint0_linear" x1="-17.5" y1="19.5" x2="24.2799" y2="-5.93296"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#4F2CFF" />
+                        <stop offset="1" stop-color="#4F2CFF" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="bg-dashboard-blue-bg rounded-lg p-2 flex items-center justify-between text-[10px]">
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-users w-3 h-3 text-dashboard-blue-text">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span class="text-dashboard-blue-text">20</span>
+                  </div>
+                  <div class="w-[1px] h-3 bg-dashboard-blue-text"></div>
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-users w-3 h-3 text-dashboard-blue-text">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span class="text-dashboard-blue-text">18</span>
+                  </div>
+                  <div class="w-[1px] h-3 bg-dashboard-blue-text"></div>
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-star w-3 h-3 text-dashboard-blue-text">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <span class="text-dashboard-blue-text">90%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-dashboard-orange-light p-4 rounded-2xl">
+                <div class="bg-dashboard-orange-bg rounded-full w-10 h-10 flex items-center justify-center mb-2">
+                  <img src="assets/network-icon.png" style="width: 40px;">
+                </div>
+                <h3 class="text-dashboard-orange-text font-bold text-xs mb-2">
+                  Network Lab
+                </h3>
+                <div class="bg-dashboard-orange-bg rounded-lg p-2 mb-2">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-dashboard-orange-text text-[10px]">
+                      Attendance
+                    </span>
+                  </div>
+                  <svg class="w-8 h-4" viewBox="0 0 31 17" fill="none">
+                    <path
+                      d="M1 15.3521C1 15.3521 4.07292 16.2475 7.14578 15.3521C14.3072 13.2653 12 3.05176e-05 17.5 3.50003C24.0892 7.69316 29.3281 7.46942 30.25 1.50003"
+                      stroke="url(#paint0_linear)" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="bg-dashboard-orange-bg rounded-lg p-2 flex items-center justify-between text-[10px]">
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-users w-3 h-3 text-dashboard-orange-text">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span class="text-dashboard-orange-text">10</span>
+                  </div>
+                  <div class="w-[1px] h-3 bg-dashboard-orange-text"></div>
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-users w-3 h-3 text-dashboard-orange-text">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span class="text-dashboard-orange-text">8</span>
+                  </div>
+                  <div class="w-[1px] h-3 bg-dashboard-orange-text"></div>
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-star w-3 h-3 text-dashboard-orange-text">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <span class="text-dashboard-orange-text">80%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-dashboard-cyan-light p-4 rounded-2xl">
+                <div class="bg-dashboard-cyan-bg rounded-full w-10 h-10 flex items-center justify-center mb-2">
+                  <img src="assets/compiler-icon.png" style="width: 40px;">
+                </div>
+                <h3 class="text-dashboard-cyan-text font-bold text-xs mb-2">
+                  Compiler design
+                </h3>
+                <div class="bg-dashboard-cyan-bg rounded-lg p-2 mb-2">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-dashboard-cyan-text text-[10px]">
+                      Attendance
+                    </span>
+                  </div>
+                  <svg class="w-8 h-4" viewBox="0 0 31 17" fill="none">
+                    <path
+                      d="M1 15.3521C1 15.3521 4.07292 16.2475 7.14578 15.3521C14.3072 13.2653 12 3.05176e-05 17.5 3.50003C24.0892 7.69316 29.3281 7.46942 30.25 1.50003"
+                      stroke="url(#paint0_linear)" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="bg-dashboard-cyan-bg rounded-lg p-2 flex items-center justify-between text-[10px]">
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-users w-3 h-3 text-dashboard-cyan-text">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span class="text-dashboard-cyan-text">30</span>
+                  </div>
+                  <div class="w-[1px] h-3 bg-dashboard-cyan-text"></div>
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-users w-3 h-3 text-dashboard-cyan-text">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span class="text-dashboard-cyan-text">10</span>
+                  </div>
+                  <div class="w-[1px] h-3 bg-dashboard-cyan-text"></div>
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-star w-3 h-3 text-dashboard-cyan-text">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <span class="text-dashboard-cyan-text">33%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-dashboard-pink-light p-4 rounded-2xl">
+                <div class="bg-dashboard-pink-bg rounded-full w-10 h-10 flex items-center justify-center mb-2">
+                  <img src="assets/graphics-icon.png" style="width: 40px;">
+                </div>
+                <h3 class="text-dashboard-pink-text font-bold text-xs mb-2">
+                  Computer Graphics
+                </h3>
+                <div class="bg-dashboard-pink-bg rounded-lg p-2 mb-2">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-dashboard-pink-text text-[10px]">
+                      Attendance
+                    </span>
+                  </div>
+                  <svg class="w-8 h-4" viewBox="0 0 31 17" fill="none">
+                    <path
+                      d="M1 15.3521C1 15.3521 4.07292 16.2475 7.14578 15.3521C14.3072 13.2653 12 3.05176e-05 17.5 3.50003C24.0892 7.69316 29.3281 7.46942 30.25 1.50003"
+                      stroke="url(#paint0_linear)" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="bg-dashboard-pink-bg rounded-lg p-2 flex items-center justify-between text-[10px]">
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-users w-3 h-3 text-dashboard-pink-text">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span class="text-dashboard-pink-text">30</span>
+                  </div>
+                  <div class="w-[1px] h-3 bg-dashboard-pink-text"></div>
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-users w-3 h-3 text-dashboard-pink-text">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span class="text-dashboard-pink-text">10</span>
+                  </div>
+                  <div class="w-[1px] h-3 bg-dashboard-pink-text"></div>
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-star w-3 h-3 text-dashboard-pink-text">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <span class="text-dashboard-pink-text">33%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-dashboard-green-light p-4 rounded-2xl">
+                <div class="bg-dashboard-green-bg rounded-full w-10 h-10 flex items-center justify-center mb-2">
+                  <img src="assets/economics-icon.png" style="width: 40px;">
+                </div>
+                <h3 class="text-dashboard-green-text font-bold text-xs mb-2">
+                  Economics
+                </h3>
+                <div class="bg-dashboard-green-bg rounded-lg p-2 mb-2">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-dashboard-green-text text-[10px]">
+                      Attendance
+                    </span>
+                  </div>
+                  <svg class="w-8 h-4" viewBox="0 0 31 17" fill="none">
+                    <path
+                      d="M1 15.3521C1 15.3521 4.07292 16.2475 7.14578 15.3521C14.3072 13.2653 12 3.05176e-05 17.5 3.50003C24.0892 7.69316 29.3281 7.46942 30.25 1.50003"
+                      stroke="url(#paint0_linear)" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="bg-dashboard-green-bg rounded-lg p-2 flex items-center justify-between text-[10px]">
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-users w-3 h-3 text-dashboard-green-text">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span class="text-dashboard-green-text">40</span>
+                  </div>
+                  <div class="w-[1px] h-3 bg-dashboard-green-text"></div>
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-users w-3 h-3 text-dashboard-green-text">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span class="text-dashboard-green-text">20</span>
+                  </div>
+                  <div class="w-[1px] h-3 bg-dashboard-green-text"></div>
+                  <div class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-star w-3 h-3 text-dashboard-green-text">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <span class="text-dashboard-green-text">50%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row gap-4">
+            <div class="flex-1 bg-[#F9F7FF] rounded-[20px] p-4 relative">
+              <h3 class="text-lg font-bold text-dashboard-secondary mb-4">
+                CGPA Graph
+              </h3>
+
+              <div class="relative h-48 mb-4">
+                <svg class="w-full h-full" viewBox="0 0 760 160" fill="none">
+                  <defs>
+                    <linearGradient id="cgpa-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#E9E3FF" />
+                      <stop offset="100%" stop-color="#E9E3FF" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M50 120 C100 80, 150 40, 200 60 C250 80, 300 120, 350 100 C400 80, 450 60, 500 90 C550 120, 600 80, 650 50 C700 20, 750 40, 800 30"
+                    stroke="#4D29EF" stroke-width="4" fill="none" stroke-linecap="round" />
+                  <path
+                    d="M50 120 C100 80, 150 40, 200 60 C250 80, 300 120, 350 100 C400 80, 450 60, 500 90 C550 120, 600 80, 650 50 C700 20, 750 40, 800 30 L800 160 L50 160 Z"
+                    fill="url(#cgpa-gradient)" />
+                </svg>
+
+                <div
+                  class="absolute top-16 left-6 bg-dashboard-primary/10 rounded-full px-2 py-1 text-xs text-dashboard-primary">
+                  6.5
+                </div>
+                <div
+                  class="absolute top-8 left-32 bg-dashboard-primary/10 rounded-full px-2 py-1 text-xs text-dashboard-primary">
+                  8.9
+                </div>
+                <div
+                  class="absolute top-20 left-60 bg-dashboard-primary/10 rounded-full px-2 py-1 text-xs text-dashboard-primary">
+                  6.1
+                </div>
+                <div
+                  class="absolute top-12 left-96 bg-dashboard-primary/10 rounded-full px-2 py-1 text-xs text-dashboard-primary">
+                  7.5
+                </div>
+                <div
+                  class="absolute top-18 left-[480px] bg-dashboard-primary/10 rounded-full px-2 py-1 text-xs text-dashboard-primary">
+                  6.4
+                </div>
+                <div
+                  class="absolute top-6 right-8 bg-dashboard-primary/10 rounded-full px-2 py-1 text-xs text-dashboard-primary">
+                  7.9
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center text-dashboard-primary text-base">
+                <span>S1</span>
+                <span>S2</span>
+                <span>S3</span>
+                <span>S4</span>
+                <span>S5</span>
+                <span>S6</span>
+              </div>
+
+              <div class="absolute top-4 right-4 bg-[#EEEBFF] rounded-lg px-4 py-2 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-bar-chart-3 w-6 h-6 text-dashboard-primary">
+                  <path d="M3 3v18h18" />
+                  <path d="M18 17V9" />
+                  <path d="M13 17V5" />
+                  <path d="M8 17v-3" />
+                </svg>
+                <span class="text-dashboard-primary font-bold">
+                  7.6 CGPA
+                </span>
+              </div>
+            </div>
+
+            <div class="w-48 bg-dashboard-gray-100 rounded-[20px] p-4">
+              <h3 class="text-lg font-bold text-dashboard-secondary mb-4">
+                Todays classes
+              </h3>
+              <div class="flex items-start gap-5">
+                <span class="text-dashboard-secondary text-xs">1</span>
+                <div>
+                  <div class="text-dashboard-secondary text-xs font-medium">
+                    Computer Graphics
+                  </div>
+                  <div class="text-dashboard-gray-200 text-[10px]">
+                    9 AM - 10 AM
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start gap-5">
+                <span class="text-dashboard-secondary text-xs">2</span>
+                <div>
+                  <div class="text-dashboard-secondary text-xs font-medium">
+                    Economics
+                  </div>
+                  <div class="text-dashboard-gray-200 text-[10px]">
+                    10 AM - 11 AM
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start gap-5">
+                <span class="text-dashboard-secondary text-xs">3</span>
+                <div>
+                  <div class="text-dashboard-secondary text-xs font-medium">
+                    Economics
+                  </div>
+                  <div class="text-dashboard-gray-200 text-[10px]">
+                    11 AM - 12 PM
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start gap-5">
+                <span class="text-dashboard-secondary text-xs">4</span>
+                <div>
+                  <div class="text-dashboard-secondary text-xs font-medium">
+                    Lunch Break
+                  </div>
+                  <div class="text-dashboard-gray-200 text-[10px]">
+                    12 PM - 1 PM
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start gap-5">
+                <span class="text-dashboard-secondary text-xs">5</span>
+                <div>
+                  <div class="text-dashboard-secondary text-xs font-medium">
+                    Algorithm Analysis
+                  </div>
+                  <div class="text-dashboard-gray-200 text-[10px]">
+                    1 PM - 2 PM
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start gap-5">
+                <span class="text-dashboard-secondary text-xs">6</span>
+                <div>
+                  <div class="text-dashboard-secondary text-xs font-medium">
+                    Python
+                  </div>
+                  <div class="text-dashboard-gray-200 text-[10px]">
+                    2 PM - 3 PM
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start gap-5">
+                <span class="text-dashboard-secondary text-xs">7</span>
+                <div>
+                  <div class="text-dashboard-secondary text-xs font-medium">
+                    Honors
+                  </div>
+                  <div class="text-dashboard-gray-200 text-[10px]">
+                    3 PM - 4 PM
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full xl:w-80 space-y-4">
+      <div class="bg-dashboard-gray-100 rounded-[18px] p-6 text-center">
+        <img src="assets/user-icon.png" class="w-28 h-28 rounded-full mx-auto mb-4" />
+        <h3 class="text-2xl font-bold text-dashboard-secondary mb-1">
+          Edwin C George
+        </h3>
+        <p class="text-xs text-dashboard-secondary mb-6">
+          Vidya Academy Of Science And Technology
+        </p>
+
+        <div class="flex justify-center gap-9">
+          <div class="text-center">
+            <p class="text-[10px] text-dashboard-gray-200">
+              Activity points
+            </p>
+            <p class="text-xl font-bold text-dashboard-secondary">
+              153
+            </p>
+          </div>
+          <div class="text-center">
+            <p class="text-[10px] text-dashboard-gray-200">SGPA</p>
+            <p class="text-xl font-bold text-dashboard-secondary">
+              7.9
+            </p>
+          </div>
+          <div class="text-center">
+            <p class="text-[10px] text-dashboard-gray-200">CGPA</p>
+            <p class="text-xl font-bold text-dashboard-secondary">
+              7.6
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold text-dashboard-secondary mb-4">
+          Calendar
+        </h3>
+        <div class="bg-dashboard-gray-100 rounded-[13px] p-2">
+          <div class="grid grid-cols-7 gap-2 mb-2">
+            <div class="text-center text-[10px] text-dashboard-gray-400 py-3">S</div>
+            <div class="text-center text-[10px] text-dashboard-gray-400 py-3">M</div>
+            <div class="text-center text-[10px] text-dashboard-gray-400 py-3">T</div>
+            <div class="text-center text-[10px] text-dashboard-gray-400 py-3">W</div>
+            <div class="text-center text-[10px] text-dashboard-gray-400 py-3">T</div>
+            <div class="text-center text-[10px] text-dashboard-gray-400 py-3">F</div>
+            <div class="text-center text-[10px] text-dashboard-gray-400 py-3">S</div>
+          </div>
+
+          <div class="grid grid-cols-7 gap-2">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">1</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">2</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">3</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">4</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">5</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">6</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">7</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">8</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-red-500 text-white">9</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">10</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">11</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">12</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-red-500 text-white">13</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">14</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">15</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">16</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">17</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">18</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">19</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">20</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">21</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-dashboard-primary text-white">
+              22</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">23</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">24</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">25</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">26</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">27</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">28</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">29</div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm bg-white text-black">30</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-6">
+    <div class="bg-dashboard-gray-100 rounded-[12px] p-4 border border-gray-200">
+      <h3 class="text-lg font-bold text-dashboard-secondary mb-4">
+        Semester attendance
+      </h3>
+      <div class="text-center">
+        <div class="relative w-32 h-32 mx-auto mb-4">
+          <svg class="w-32 h-32 transform -rotate-90" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" stroke="#EAEAEA" stroke-width="8" fill="none" />
+            <circle cx="50" cy="50" r="40" stroke="#D76B66" stroke-width="8" fill="none" stroke-dasharray="164"
+              stroke-dashoffset="65" stroke-linecap="round" />
+          </svg>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="text-3xl font-bold text-black">66</span>
+          </div>
+        </div>
+        <p class="text-xs text-black mb-1">
+          Your attendance Score is average
+        </p>
+        <p class="text-[10px] text-gray-400">Last Check on 21 Feb</p>
+        <div class="bg-gray-200 rounded px-2 py-1 text-[10px] text-gray-400 mt-2 inline-block">
+          What these stats mean?
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-dashboard-gray-100 rounded-[17px] p-4">
+      <h3 class="text-lg font-bold text-dashboard-secondary mb-4">
+        Notifications
+      </h3>
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center">
+          <img src="assets/Reg.PNG">
+        </div>
+        <div>
+          <div class="text-sm font-bold text-dashboard-secondary">
+            Exam Registration
+          </div>
+          <div class="text-[10px] text-dashboard-gray-200">
+            22 Feb 2024
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center">
+          <img src="assets/verify.PNG">
+        </div>
+        <div>
+          <div class="text-sm font-bold text-dashboard-secondary">
+            Verify your email
+          </div>
+          <div class="text-[10px] text-dashboard-gray-200">
+            22 Feb 2024
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center">
+          <img src="assets/failed.PNG">
+        </div>
+        <div>
+          <div class="text-sm font-bold text-dashboard-secondary">
+            Email verification failed
+          </div>
+          <div class="text-[10px] text-dashboard-gray-200">
+            22 Feb 2024
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-1 text-dashboard-primary font-bold text-sm cursor-pointer">
+        <span>View all</span>
+        <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="bg-dashboard-gray-100 rounded-[17px] p-4">
+      <h3 class="text-lg font-bold text-dashboard-secondary mb-4">
+        Internal exam schedule
+      </h3>
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center">
+          <img src="assets/python-icon.png" style="width: 40px;">
+        </div>
+        <div>
+          <div class="text-sm font-bold text-dashboard-secondary">
+            Python
+          </div>
+          <div class="text-[10px] text-dashboard-gray-200">
+            26 Feb 2024
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center">
+          <img src="assets/compiler-icon.png" style="width: 40px;">
+        </div>
+        <div>
+          <div class="text-sm font-bold text-dashboard-secondary">
+            Compiler design
+          </div>
+          <div class="text-[10px] text-dashboard-gray-200">
+            26 Feb 2024
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center">
+          <img src="assets/graphics-icon.png" style="width: 40px;">
+        </div>
+        <div>
+          <div class="text-sm font-bold text-dashboard-secondary">
+            Computer graphics
+          </div>
+          <div class="text-[10px] text-dashboard-gray-200">
+            26 Feb 2024
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-1 text-dashboard-primary font-bold text-sm cursor-pointer">
+        <span>View all</span>
+        <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="bg-dashboard-gray-100 rounded-[17px] p-4">
+      <h3 class="text-lg font-bold text-dashboard-secondary mb-4">
+        Pending work
+      </h3>
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center">
+          <img src="assets/aad.PNG">
+        </div>
+        <div>
+          <div class="text-sm font-bold text-dashboard-secondary">
+            AAd Assignment
+          </div>
+          <div class="text-[10px] text-dashboard-gray-200">
+            22 Feb 2024
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center">
+          <img src="assets/network.PNG">
+        </div>
+        <div>
+          <div class="text-sm font-bold text-dashboard-secondary">
+            Network Lab Program
+          </div>
+          <div class="text-[10px] text-dashboard-gray-200">
+            22 Feb 2024
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center">
+          <img src="assets/CG.PNG">
+        </div>
+        <div>
+          <div class="text-sm font-bold text-dashboard-secondary">
+            CG Assignments
+          </div>
+          <div class="text-[10px] text-dashboard-gray-200">
+            22 Feb 2024
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-1 text-dashboard-primary font-bold text-sm cursor-pointer">
+        <span>View all</span>
+        <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>
